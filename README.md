@@ -996,4 +996,4 @@ fig.legend()
 
 fig.show()
 ```
-
+![Map](/Figures/Surf_spots_w_stations_oahu_relief.png)
