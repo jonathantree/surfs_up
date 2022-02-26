@@ -2,11 +2,11 @@
 
 ## Project Overview:
 
-This project focuses on revealing weather trends on the Hawaiian island of Oahu. These data will be used to convince potential investors of the potential of an ice cream and surf shop start up (hypothetical). The investors would like to be convinced that the weather data supports the business model. To add support for this idea using data, exploratory data analysis was conducted using weather staion data. These data contain information of the weather station location, name, precipitation and temperature. Specifically, this project aimed to look at seasonal trends of the temperature and precipitaiton data during the winter month of December and the Summer month of June from 2010 to 2018. Descriptive statistics of the weather from these months will determine the sustainability of this shop year-round. In addition to the statistical analysis, special consideration was paid to understanding the location of weather stations, how this may influence our analysis and further considerations for future planning.
+This project focuses on revealing weather trends on the Hawaiian island of Oahu. These data will be used to convince investors of the potential of an ice cream and surf shop start up (hypothetical). The investors would like to be convinced that the weather data supports the business model. To add support for this proposal, exploratory data analysis was conducted using data from weather stations around the island. The database is a .sqlite format and contained two tables: measurements and stations. These data contain information of the weather station location, name, precipitation and temperature. Specifically, this project aimed to look at seasonal trends of the temperature and precipitation data during the month of December and the month of June from 2010 to 2018. Descriptive statistics of the weather from these months will determine the sustainability of this shop year-round. In addition to the statistical analysis, special consideration was paid to understanding the location of weather stations, how this may influence our analysis and further considerations for future planning.
 
 ### Resources
 #### Software:
-- Selected Jupyter core packages...
+- Selected Jupyter core packages:
   - IPython: 8.0.1
   - ipykernel: 6.9.0
   - jupyter_client: 7.1.2
@@ -368,26 +368,26 @@ dec_temps_df.describe()
 </table>
 </div>
 
-### Conclusions based on statistal analysis of temperature data:
+### Conclusions based on statistical analysis of temperature data:
 1. The average temperature in the month of June is 75° with a standard deviation of 3°. 
 2. The average temperature in the month of June is 71° with a standard deviation of 4°. 
 3. The overall range in temperatures that were observed for the month of June are 64° to 85°.
-4. The overall range in temperatures for the month of December are 56° to 83°.
+4. The overall range in temperatures that were observed for the month of December are 56° to 83°.
 
 ## Summary:
 
 In addition to considering the temperatures during the summer and winter, precipitation is another parameter that could be investigated. Below are queries that retrieve these data and they are plotted along with the temperature in Figure 1. Some conclusions that can be drawn from these data are:
-1. Minimum temperatures during the month of December btween 55° and 60° could indicate days of slow business.
+1. Minimum temperatures during the month of December between 55° and 60° could indicate days of slow business.
 2. Maximum temperatures between 80° to 85° occur during both months and could make up for lost business on cold days.
 3. The difference between the average temperatures between summer and winter is only 4°, suggesting that based on temperature data, the business is sustainable year-round.
 4. Most temperatures lie within the 2-sigma range (Figure 1) indicating that temperature variation is not a strong concern for business.
-5. Outlier precipitaion points occur more frequently in the month of December than in the month of June, though December precipitation data reveal a maximum precipitation value of 6.42 cm vs the maximum of June at 4.43 cm. This suggests that the rain during these days was heavier and/or more consistent throughout the day. 
+5. Outlier precipitation points occur more frequently in the month of December than in the month of June, though December precipitation data reveal a maximum precipitation value of 6.42 cm vs the maximum of June at 4.43 cm. This suggests that the rain during these days was heavier and/or more consistent throughout the day. 
 
-These analysis were conducted without isolating a weather station who's location would show a representative sample of the weather patterns near a desireable place to put the shop. If the business were to thrive as designed, it should be placed at a location near as many popular surf spots as possible. The map in figure two shows the location of popular surf spots on Oahu. Most of the popular surf spots are located on the North Shore and South Shore (Waikiki) of the island. These surfing locations also vary in seasonality of their peak conditions. The North Shore's season of best surfing conditions occur during the Winter, which could also be a colder and wetter period so maybe not the best location to sustain a ice cream and surf shop year-round. The South Shore or Waikiki experiences its best surfing conditions during the summer months. It also has the added benefit of being a tourist hot-bed. This would be the ideal location to sustain business for this shop year-round.
+These analyses were conducted without isolating a weather station who's location would show a representative sample of the weather patterns near a desirable place to put the shop. If the business were to thrive as designed, it should be placed at a location near as many popular surf spots as possible. The map in figure two shows the location of popular surf spots on Oahu. Most of the popular surf spots are located on the North Shore and South Shore (Waikiki) of the island. These surfing locations also vary in seasonality of their peak conditions. The North Shore's season of best surfing conditions occur during the Winter, which could also be a colder and wetter period so maybe not the best location to sustain a ice cream and surf shop year-round. The South Shore or Waikiki experiences its best surfing conditions during the summer months. It also has the added benefit of being a tourist hot-bed. This would be the ideal location to sustain business for this shop year-round.
 
-Given this reasoning, a more focused analysis should be conducted on the weather station closest to this location. This station happens to be USC00519397. The precipitation and temperature data used to calculate the descriptive statistics above could be biased because we incoorporated weather stations from different elevations. To create a more accurate representation of the expeceted weather, the dataset could be filtered to only include data from station USC00519397.
+Given this reasoning, a more focused analysis should be conducted on the weather station closest to this location. This station happens to be USC00519397. The precipitation and temperature data used to calculate the descriptive statistics above could be biased because we incorporated weather stations from different elevations. To create a more accurate representation of the expected weather, the dataset could be filtered to only include data from station USC00519397.
 
-#### *Figure 1. Subplots showing the temperature and precipitation for the months of June and Decemember. Also plotted are the mean and 2x standard deviation as horizontal lines*
+#### *Figure 1. Subplots showing the temperature and precipitation for the months of June and December. Also plotted are the mean and 2x standard deviation as horizontal lines*
 ![plot](Figures/plots.png)
 
 #### *Figure 2. Map of Oahu elevation and the locations of popular surf spots in relation to the weather stations used in this analysis*
